@@ -1,0 +1,217 @@
+1
+frase = input("Digite seu nome completo:")
+nova_frase = " "
+vogais = "aeiou"
+
+for caractere in frase:
+    if(caractere in vogais):
+        nova_frase += "*"
+    else:
+        nova_frase += caractere
+print(nova_frase)
+
+
+2
+palavra = input("Digite uma palavra: ")
+print("A palavra possui", len(palavra), ("caracteres.")) 
+
+
+
+3        
+def contador_de_a():
+    texto = input("Digite seu nome completo: ")
+    return f'As letras "a" aparecem {texto.count("a")} vezes na frase'
+print(contador_de_a())
+
+4
+nome = input ("Digite seu nome completo: ")
+nome_maiusculo = nome.upper()
+print(nome_maiusculo)
+
+
+
+
+5
+nome = input ("Digite seu nome completo: ")
+nome_minuscula = nome.lower()
+
+print(nome_minuscula)
+      
+6
+first_name = input("Digite seu primeiro nome: ")
+lastname = input("Digite seu sobrenome: ")
+
+first_name_Maiusculo = first_name.upper()
+lastname_Minusculo = lastname.lower()
+
+print("Nome em maiúsculas: ", first_name_Maiusculo)
+print("Sobrenome em minúsculas: ", lastname_Minusculo)
+
+
+
+7
+nome_completo = input("Digite seu nome e sobrenome: ")
+
+nome_usuário, sobrenome_usuario = nome_completo.split()
+
+nome_completo = nome_usuário.upper() + " " + sobrenome_usuario.upper()
+
+print("Nome completo em letras minúsculas:", nome_completo.lower())
+
+tamanho_nome_completo = len(nome_completo)
+
+print("Tamanho do nome completo:", tamanho_nome_completo)
+
+
+8
+def contar_palavras(texto):
+    palavras = texto.split()
+    return len(palavras)
+
+def contar_vogais(texto):
+    vogais = "aeiouAEIOU"
+    contador = 0
+    for letra in texto:
+        if letra in vogais:
+            contador += 1
+    return contador 
+
+def substituir_python_por_java(texto):
+    return texto.replace("Python", "Java")
+
+def converter_para_minusculas(texto):
+    return texto.lower()
+
+def encontrar_palavras_unicas(texto):
+    palavras = texto.lower().split()
+    palavras_unicas = set(palavras)
+    return palavras_unicas
+
+def imprimir_palavras_ordem_alfabetica(texto):
+    palavras = texto.lower().split()
+    palavras.sort()
+    for palavra in palavras:
+        print(palavra)
+
+def exibir_menu():
+    print("Menu de Opções:")
+    print("1 Conte o número total de palavras digitadas.")
+    print("2 Conte o número de vogais na palavra digitada.")
+    print("3 Substitua todas as ocorrências da palavra 'Python' por 'Java'.")
+    print("4 Converta todas as letras da string para minúsculas.")
+    print("5 Crie uma lista com todas as palavras únicas encontradas na string.")
+    print("6 Imprima as palavras na string em ordem alfabética.")
+    print("0. Sair")
+
+texto = input("Digite um texto: ")
+
+while True:
+    exibir_menu()
+    opcao = input("Digite a opção desejada: ")
+
+    if opcao == '1':
+        total_palavras = contar_palavras(texto)
+        print("Total de palavras:", total_palavras)
+    elif opcao == '2':
+        total_vogais = contar_vogais(texto)
+        print("Total de vogais:", total_vogais)
+    elif opcao == '3':
+        texto = substituir_python_por_java(texto)
+        print("Texto com sybstituição:", texto)
+    elif opcao == '4':
+        texto = converter_para_minusculas(texto)
+        print("Texto em minúsculas:", texto)
+    elif opcao == '5':
+        palavras_unicas = encontrar_palavras_unicas(texto)
+        print("Palavras únicas:", palavras_unicas)
+    elif opcao == '6':
+        imprimir_palavras_ordem_alfabetica(texto)
+    elif opcao == '0':
+        print("Encerrando o programa.")
+        break
+    else:
+        print("Opção inválida. Digite novamente.")
+
+
+9
+def apagar_vogais():
+    frase = input("Digite uma palavra: ")
+    return frase.lower().replace('a', '').replace('e', '').replace('i', '').replace('o', '').replace('u', '')
+
+print(apagar_vogais())
+
+10
+def quantidade_caracter(texto):
+    texto_sem_espaca = texto.lower().replace(' ', '')
+    return len(texto_sem_espaca)
+ 
+    
+print("Esse texto possui ",quantidade_caracter(input("Digite texto ")), " caracter's")
+
+
+def funcao_substituir_texto(texto):
+    return texto.replace('Python', 'Java')
+
+print(funcao_substituir_texto('Eu gosto de Python'))
+ execute numa aplucação que solicite uma palavra ao usuário e imprima o resultado no console.
+
+def substituir_vogais(texto):
+    return texto.replace('a', '*').replace('e', '*').replace('i', '*').replace('o', '*').replace('u', '*')
+
+
+print(substituir_vogais(input('Digite uma palavra: ')))
+
+def tamanho_string(texto):
+    return len(texto)
+
+print(tamanho_string('Python'))
+texto_user = input('Digite uma palavra: ')
+print("Sua palavra tem "+ str(tamanho_string(texto_user)) + " caracteres")
+
+def contar_caracteres(texto):
+    return texto.count('a')
+print(contar_caracteres('Abelha'))
+
+def capitalizar(texto):
+    return texto.capitalize()
+
+print(capitalizar('python'))
+
+
+def capitalizar_titulo(texto):
+    return texto.title()
+
+print(capitalizar_titulo('python é legal'))
+
+
+def maiusculas(texto):
+    return texto.upper()
+
+7
+def minusculas(texto):
+    return texto.lower()
+8
+def inverter_maiusculas_minusculas(texto):
+return texto.swapcase()
+
+9
+def remover_espacos(texto):
+    return texto.strip()
+
+10
+
+def separar_palavras(texto):
+    return texto.split()
+
+11
+def juntar_palavras(texto):
+    return ' '.join(texto)
+
+
+12
+def encontrar_palavra(texto):
+    return texto.find('Python')
+
+13
+def comeca_com(texto):
+    return texto.startswith('Python')
